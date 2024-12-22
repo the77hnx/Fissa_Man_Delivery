@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layoutDirection="rtl"
+    android:background="@drawable/backlogin1"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logoapp_removebg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تسجيل الدخول"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="14dp" />
+
+    <EditText
+        android:id="@+id/etemaillogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/field_border"
+        android:hint="البريد الالكتروني"
+        android:gravity="right"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/etPasslogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:background="@drawable/field_border"
+        android:hint="كلمة المرور"
+        android:inputType="textPassword"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:minHeight="48dp"
+        android:text="تذكرني"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnPhoneLoginpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tomato_button"
+        android:text="تسجيل الدخول"
+        android:textColor="#000000"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+    <Button
+        android:id="@+id/btnopenaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tomato_button"
+        android:text="طلب فتح حساب"
+        android:textColor="#000000"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

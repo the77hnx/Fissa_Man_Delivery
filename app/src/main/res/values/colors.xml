@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary app colors -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="my_primary">#FF5964</color>
+    <color name="purple_500">#9C27B0</color>
+
+
+    <!-- Background colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="light_gray">#060307</color>
+    <color name="purple_700">#7C4DFF</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <!-- Text colors -->
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+
+    <!-- Navigation colors -->
+    <color name="navigation_color_selector">@color/orange</color>
+    <color name="navigation_color_unselected">@color/black</color>
+
+    <!-- Button colors -->
+    <color name="yellow">#FFA500</color>
+    <color name="orange">#FF5e00</color>
+    <color name="red">#ed1e24</color>
+    <color name="yellow_grad">#f5e118</color>
+    <color name="orange_grad">#F46B06</color>
+    <color name="pink">#F44336</color>
+    <color name="textcolor">#1C0978</color>
+    <color name="green">#4CAF50</color>
+    <color name="grey">#808080</color>
+    <color name="coral">#FF7F50</color>
+    <color name="tomato_red">#f27023</color>
+    <color name="tangerine_orange">#FFA500</color>
+    <color name="apple_green">#8DB600</color>
+    <color name="lemon_yellow">#FFD700</color>
+    <color name="profileordercolor">#ecf9ff</color>
+    <color name="underline">#D8D6D6</color>
+    <color name="backgrey">#F0F0F0</color>
+
+
+
+    <color name="Dark_Gray">#4a4a4a</color>
+    <color name="Light_Gray">#f2f2f2</color>
+    <color name="Soft_White">#ffffff</color>
+    <color name="logo">#FFF5F3</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

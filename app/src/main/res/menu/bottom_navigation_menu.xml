@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="الرئيسية"
+        app:itemIconTint="@color/navigation_color_selector"
+        app:itemTextColor="@color/navigation_color_unselected"/>
+
+    <item
+        android:id="@+id/navigation_basket"
+        android:icon="@drawable/time"
+        android:title="سجل الطلبات"
+        app:itemIconTint="@color/navigation_color_selector"
+        app:itemTextColor="@color/navigation_color_unselected"/>
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="الملف الشخصي"
+        app:itemIconTint="@color/navigation_color_selector"
+        app:itemTextColor="@color/navigation_color_unselected"/>
+
+</menu>

@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tomato_toolbar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/hi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/hacen_beirut_bight"
+                    android:paddingRight="10dp"
+                    android:text="مرحبا"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nameDel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/hacen_beirut_bight"
+                    android:paddingTop="5dp"
+                    android:text="أكرم بالهادي"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/hacen_beirut_bight"
+                    android:text="غير متاح"
+                    android:textColor="@color/red"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/offer_switch_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:textOff="OFF"
+                    android:textOn="ON"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+            <!--            <com.google.android.material.switchmaterial.SwitchMaterial-->
+            <!--                android:id="@+id/Status_switch_main"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_weight="0.5"-->
+            <!--                android:checked="true"-->
+            <!--                android:clickable="true"-->
+            <!--                android:focusable="true"-->
+            <!--                android:textOff="غير متاح"-->
+            <!--                android:textOn="متاح"-->
+            <!--                android:fontFamily="@font/hacen_beirut_bight"-->
+            <!--                app:showText="true"-->
+            <!--                app:switchTextAppearance="@style/TextAppearance.AppCompat.Subhead"-->
+            <!--                app:thumbTint="@drawable/ic_thumb"-->
+            <!--                android:thumb="@drawable/ic_thumb"-->
+            <!--                app:track="@drawable/bg_track"-->
+            <!--                app:trackTint="@drawable/bg_track"-->
+            <!--                tools:ignore="TouchTargetSizeCheck" />-->
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView_ma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView_ma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layoutDirection="rtl"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/profileordercolor"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imagecustomerdel"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/profile" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/customer_name_main"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="أحمد علي"
+                                android:gravity="right"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/pay_meth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="طريقة الدفع: كاش"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/price_del_main"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="سعر التوصيل: 200 دج"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:id="@+id/allprice_main"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="سعر الطلبية: 2500 دج"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/order_id_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:text="#1324"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical"/>
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/item_name_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="مكان المطعم :"
+                                android:textColor="@color/black"
+                                android:paddingLeft="10dp"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/Restaurant_location"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="لبامة البياضة"
+                                android:gravity="right"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:id="@+id/order_message_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="مكان الزبون :"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/customer_location"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:text="حي المستقبل البياضة"
+                                android:gravity="right"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <Button
+                        android:id="@+id/detailed_order_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@drawable/tomato_padding_button"
+                        android:fontFamily="@font/hacen_beirut_bight"
+                        android:text="التفاصيل"
+                        android:textColor="@color/tomato_red"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/direction_order_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/accept_button"
+                        android:fontFamily="@font/hacen_beirut_bight"
+                        android:text="الاتجاه"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/wallettitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:text="ملخص الرصيد"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layoutDirection="rtl"
+                app:cardBackgroundColor="@color/tomato_red"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/earningsContainer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tomato_button"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/earningsContainer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/tomato_button"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_wallet_white" />
+
+
+                        <LinearLayout
+                            android:id="@+id/earningsContainer3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/tomato_button"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/wallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="الرصيد"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/valwallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="2000.00 دج"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/earningsContainer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/tomato_button"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/earningsContainer5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tomato_button"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="اليوم"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/valtoday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="300.00 دج"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/earningsContainer6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tomato_button"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/week"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="الأسبوع"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/valweek"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="300.00 دج"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black" />
+
+
+                        <LinearLayout
+                            android:id="@+id/earningsContainer7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tomato_button"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="الشهر"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/valmonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingTop="5dp"
+                                android:text="300.00 دج"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:text="ملخص الطلبات"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:layoutDirection="rtl"
+                    android:padding="20dp"
+                    app:cardBackgroundColor="#D016CA1E"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+
+                        <!-- باقي التخطيط كما هو -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+
+                            <TextView
+                                android:id="@+id/item_name_new3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="الطلبات المقبولة"
+                                android:textColor="@color/black"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/Accepted_orders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="10"
+                                android:textColor="@color/black"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/order_message_new3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingLeft="10dp"
+                                android:text="طلبات"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:layoutDirection="rtl"
+                    android:padding="20dp"
+                    app:cardBackgroundColor="#E6FA1B21"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+
+                        <!-- باقي التخطيط كما هو -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+
+                            <TextView
+                                android:id="@+id/item_name_new2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="الطلبات المرفوضة"
+                                android:textColor="@color/black"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/Rejected_orders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="10"
+                                android:textColor="@color/black"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/order_message_new2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hacen_beirut_bight"
+                                android:paddingLeft="10dp"
+                                android:text="طلبات"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                android:layoutDirection="rtl"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/tomato_red"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+
+                    <!-- باقي التخطيط كما هو -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp">
+
+
+                        <TextView
+                            android:id="@+id/item_name_new5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="هذا اليوم"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/daily_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="10"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/order_message_new5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:paddingLeft="10dp"
+                            android:text="طلبات"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                android:layoutDirection="rtl"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/tomato_red"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+
+                    <!-- باقي التخطيط كما هو -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp">
+
+
+                        <TextView
+                            android:id="@+id/item_name_new6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="هذا الشهر"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/Monthly_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="10"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/order_message_new6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hacen_beirut_bight"
+                            android:paddingLeft="10dp"
+                            android:text="طلبات"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/rating_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:text="التقييم"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layoutDirection="rtl"
+                android:padding="20dp"
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+
+                    <!-- باقي التخطيط كما هو -->
+
+
+                    <TextView
+                        android:id="@+id/item_name_new4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/hacen_beirut_bight"
+                        android:gravity="right"
+                        android:text="تقييمي"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/item_name4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/hacen_beirut_bight"
+                        android:gravity="left"
+                        android:text="5.0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView_ma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/tomato_red"
+        app:itemTextColor="@color/tomato_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

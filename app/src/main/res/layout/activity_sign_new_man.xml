@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".SignNewManActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:text="تسجيل مركبتي"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tomato_topcorners">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/selectImageresButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/uploadimage_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:text="اختيار صورة للمركبة"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/selectedImageRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+            <EditText
+                android:id="@+id/etNameMag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="اسم صاحب المركبة"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/etemailsign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="البريد الالكتروني"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/etPasswordsign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="كلمة السر"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/etconfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="تكرار كلمة السر"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/etnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="الهاتف"
+                android:maxLength="10"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="اسم  المركبة"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/etplacesres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="العنوان (بلدية/حي)"
+                android:inputType="textLongMessage"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/etN0Enrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="رقم المركبة"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/etIdNational"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field_border"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:gravity="right"
+                android:hint="رقم بطاقة التعريف الوطنية"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <ImageView
+                android:id="@+id/selectedResID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnsendinfores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/tomato_button"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:text="إرسال الطلب"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".VehicleInfoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/hacen_beirut_bight"
+        android:text="معلومات مركبتي"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tomato_topcorners">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/name_pend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingRight="10dp"
+                android:text="اسم السائق"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/NumberVeh_pend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingRight="10dp"
+                android:text="اسم السائق"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/status_pend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingRight="10dp"
+                android:text="الحالة: قيد المراجعة"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sooncall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:paddingRight="10dp"
+                android:text="سوف يتم الاتصال بكم في أقرب وقت !"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/calldescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/hacen_beirut_bight"
+                android:text="لمزيد من التفاصيل راسلنا عبر"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_facebook"
+                    app:layout_constraintStart_toEndOf="@+id/placeres"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="facebook_icon_desc"/>
+
+                <ImageView
+                    android:id="@+id/gmail"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_gmail"
+                    app:layout_constraintStart_toEndOf="@+id/placeres"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="gmail_icon_desc"/>
+
+                <ImageView
+                    android:id="@+id/whatsapp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_whatsapp"
+                    android:clickable="true"
+                    app:layout_constraintStart_toEndOf="@+id/placeres"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="whatsapp_icon_desc"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

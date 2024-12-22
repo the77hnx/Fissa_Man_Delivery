@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderInDeliveryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/tomato_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/black">
+
+        <TextView
+            android:id="@+id/basket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/hacen_beirut_bight"
+            android:text="وجهة الطلبية"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="120dp"
+            >
+
+            <!-- FragmentContainerView for dynamic fragment replacement -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map_container"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:name="com.example.man_delivery_food.MapsFragment"
+                tools:layout="@layout/fragment_maps" />
+
+            <LinearLayout
+                android:id="@+id/delivery_done"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Receive_Done_order"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@drawable/accept_button"
+                    android:fontFamily="@font/hacen_beirut_bight"
+                    android:text="تم الاستلام"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/detailed_order_btn_od"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tomato_padding_button"
+                    android:fontFamily="@font/hacen_beirut_bight"
+                    android:text="التفاصيل"
+                    android:textColor="@color/tomato_red"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <!-- OTP Input Field and Submit Button -->
+            <LinearLayout
+                android:id="@+id/otp_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <Button
+                    android:id="@+id/submit_otp"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/accept_button"
+                    android:fontFamily="@font/hacen_beirut_bight"
+                    android:text="تأكيد"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView_od"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/tomato_red"
+        app:itemTextColor="@color/tomato_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>
